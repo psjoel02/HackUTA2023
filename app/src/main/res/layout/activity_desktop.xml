@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_weight="2"
+        android:weightSum="10"
+        >
+        <Space
+            android:layout_width="100px"
+            android:layout_height="50px"
+            android:layout_weight=".25" />
+
+        <LinearLayout
+            android:layout_width="10pt"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:weightSum="10"
+            android:orientation="vertical"
+            >
+            <Space
+                android:layout_width="200pt"
+                android:layout_height="60pt"
+                android:layout_weight="9.6"></Space>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:text="Make:"
+                android:textSize="30px"
+
+                ></TextView>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="100px"
+            android:layout_height="50px"
+            android:layout_weight=".25" />
+
+        <LinearLayout
+            android:layout_width="10pt"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:weightSum="10"
+            android:orientation="vertical"
+            >
+            <Space
+                android:layout_width="200pt"
+                android:layout_height="60pt"
+                android:layout_weight="9.6"></Space>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:text="Model:"
+                android:textSize="30px"
+
+                ></TextView>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="100px"
+            android:layout_height="50px"
+            android:layout_weight=".25" />
+
+        <LinearLayout
+            android:layout_width="10pt"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:weightSum="10"
+            android:orientation="vertical"
+            >
+            <Space
+                android:layout_width="200pt"
+                android:layout_height="60pt"
+                android:layout_weight="9.6"></Space>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:text="Mileage:"
+                android:textSize="30px"
+
+                ></TextView>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="100px"
+            android:layout_height="50px"
+            android:layout_weight=".25" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".25"
+        android:weightSum="10">
+
+<!--        <EditText-->
+<!--            android:id="@+id/carType"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="3"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="text"-->
+<!--            android:text="Name" />-->
+        <Space
+            android:layout_width="100px"
+            android:layout_height="50px"
+            android:layout_weight=".25" />
+
+        <Spinner
+            android:id="@+id/makeSpinner"
+            android:layout_width="20px"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+
+            android:spinnerMode="dropdown"
+
+            android:background="@null"
+            >
+        </Spinner>
+
+        <Space
+            android:layout_width="100px"
+            android:layout_height="50px"
+
+            android:layout_weight=".25" />
+
+<!--        <EditText-->
+<!--            android:id="@+id/dddd"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="3"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="text"-->
+<!--            android:text="Name" />-->
+
+        <Spinner
+            android:id="@+id/modelSpinner"
+            android:layout_width="20px"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/teal_200"
+
+            >
+        </Spinner>
+
+        <Space
+            android:layout_width="100px"
+            android:layout_height="50px"
+            android:layout_weight=".25" />
+
+        <!--        <EditText-->
+<!--            android:id="@+id/dssd"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="3"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="text"-->
+<!--            android:text="Name" />-->
+        <EditText
+            android:id="@+id/fakeSpinner"
+            android:layout_width="20px"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/teal_200"
+            android:ems="3"
+            android:inputType="number"
+            android:textSize="40px"></EditText>
+
+        <Space
+            android:layout_width="100px"
+            android:layout_height="50px"
+            android:layout_weight=".25" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".25"
+        android:weightSum="10">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Year"
+        ></TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:weightSum="10">
+        <Spinner
+            android:id="@+id/enterYear"
+            android:layout_width="300px"
+
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/teal_200"
+            android:ems="3"
+            android:inputType="number"
+            android:textSize="40px"></Spinner>
+    </RelativeLayout>
+
+<!--    <EditText-->
+<!--        android:id="@+id/carType"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="text"-->
+<!--        android:text="Name" />-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Submit"
+            ></Button>
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:layout_weight="4"
+         />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+         />
+
+
+</LinearLayout>

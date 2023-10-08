@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hitchback" />
+
+    <!-- ImageView for the  -->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="16dp"
+    app:layout_constraintBottom_toTopOf="@+id/textViewYear"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/todo" />
+
+    <!-- TextView to display the year of the car -->
+    <EditText
+        android:id="@+id/textViewYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/teal_200"
+        android:enabled="false"
+        android:background="@null"
+        android:inputType="none"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/year_of_the_car" />
+
+    <!-- TextView to display the odometer reading -->
+    <EditText
+        android:id="@+id/textViewOdometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/teal_200"
+        android:enabled="false"
+        android:background="@null"
+        android:inputType="none"
+        app:layout_constraintTop_toBottomOf="@+id/textViewYear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/odometer_reading" />
+
+    <!-- TextView to display expected oil change miles -->
+    <EditText
+        android:id="@+id/textViewOilChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/teal_200"
+        android:enabled="false"
+        android:background="@null"
+        android:inputType="none"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOdometer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/expected_oil_change_miles" />
+
+    <!-- TextView to display expected year for battery change -->
+    <EditText
+        android:id="@+id/textViewBatteryChangeYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/teal_200"
+        android:enabled="false"
+        android:background="@null"
+        android:inputType="none"
+        android:textIsSelectable="false"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOilChange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/expected_year_for_battery_change" />
+
+    <!-- TextView to display expected tire change miles -->
+    <EditText
+        android:id="@+id/textViewTireChangeMiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/teal_200"
+        android:enabled="false"
+        android:background="@null"
+        android:inputType="none"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBatteryChangeYear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/expected_tire_change_miles" />
+</androidx.constraintlayout.widget.ConstraintLayout>

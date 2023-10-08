@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">HackUTA2023</string>
+    <string name="year_of_the_car">Year of the car:</string>
+    <string name="odometer_reading">Odometer reading:</string>
+    <string name="expected_oil_change_miles">Expected oil change miles:</string>
+    <string name="expected_year_for_battery_change">Expected year for battery change:</string>
+    <string name="expected_tire_change_miles">Expected tire change miles:</string>
 </resources>

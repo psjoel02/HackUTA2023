@@ -14,6 +14,10 @@ public class MainActivity extends AppCompatActivity {
 
         setTitle("Nationwide is on your side");
 
+        Intent i = new Intent(this, DesktopActivity.class);
+        startActivity(i);
+//        this.finish();
+
         /*Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
         this.finish();*/
