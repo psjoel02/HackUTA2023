@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
+    android:background="@drawable/grad2"
     >
 
     <LinearLayout
@@ -36,7 +37,7 @@
                 android:layout_weight=".4"
                 android:text="Make:"
                 android:textSize="30px"
-
+                android:fontFamily="@font/bruh"
                 ></TextView>
         </LinearLayout>
 
@@ -63,7 +64,7 @@
                 android:layout_weight=".4"
                 android:text="Model:"
                 android:textSize="30px"
-
+                android:fontFamily="@font/bruh"
                 ></TextView>
         </LinearLayout>
 
@@ -90,7 +91,7 @@
                 android:layout_weight=".4"
                 android:text="Mileage:"
                 android:textSize="30px"
-
+                android:fontFamily="@font/bruh"
                 ></TextView>
         </LinearLayout>
 
@@ -126,7 +127,7 @@
             android:layout_weight="3"
 
             android:spinnerMode="dropdown"
-
+            android:fontFamily="@font/bruh"
             android:background="@null"
             >
         </Spinner>
@@ -151,6 +152,7 @@
             android:layout_width="20px"
             android:layout_height="wrap_content"
             android:layout_weight="3"
+            android:fontFamily="@font/bruh"
             android:background="@color/teal_200"
 
             >
@@ -178,6 +180,7 @@
             android:background="@color/teal_200"
             android:ems="3"
             android:inputType="number"
+            android:fontFamily="@font/bruh"
             android:textSize="40px"></EditText>
 
         <Space
@@ -190,12 +193,13 @@
         android:layout_height="wrap_content"
         android:layout_weight=".25"
         android:weightSum="10">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Year"
-        ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/bruh"
+            android:text="Year"></TextView>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -205,7 +209,7 @@
         <Spinner
             android:id="@+id/enterYear"
             android:layout_width="300px"
-
+            android:fontFamily="@font/bruh"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:background="@color/teal_200"
@@ -226,13 +230,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1">
+
         <Button
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Submit"
-            ></Button>
+            android:fontFamily="@font/bruh"
+            android:text="Submit"></Button>
     </RelativeLayout>
 
     <Space

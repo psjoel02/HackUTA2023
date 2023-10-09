@@ -32,7 +32,6 @@
         <activity android:name=".HyundaiElantra"></activity>
         <activity android:name=".HyundaiTucson"></activity>
         <activity android:name=".ToyotaCorolla"></activity>
-        <activity android:name=".AmericaPop"></activity>
     </application>
 
 </manifest>
