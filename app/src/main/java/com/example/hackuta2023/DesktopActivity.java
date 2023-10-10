@@ -24,7 +24,7 @@ public class DesktopActivity extends AppCompatActivity {
     public EditText carType;
 
     private TextView changeText, odometer;
-    private Button submitButton;
+    private Button submitButton, secretButton;
     private int mileage, year;
     private String carModel, carMake;
 
@@ -152,14 +152,16 @@ public class DesktopActivity extends AppCompatActivity {
 
         submitButton = findViewById(R.id.submitButton);
 
+        secretButton = findViewById(R.id.secretestButton);
+
         odometer.addTextChangedListener(Watcher);
 //        carType.addTextChangedListener(Watcher);
 
 //        ArrayAdapter<String> makeAdapt = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, );
 
-        ArrayAdapter<String> makeAdapt = new ArrayAdapter<>(this, R.layout.drop_down_item , make);
-        ArrayAdapter<String> modelAdapt = new ArrayAdapter<>(this, R.layout.drop_down_item , modelEmpty);
-        ArrayAdapter<String> yearAdapt = new ArrayAdapter<>(this, R.layout.drop_down_item , yearChoic);
+        ArrayAdapter<String> makeAdapt = new ArrayAdapter<>(this, R.layout.drop_down_item, make);
+        ArrayAdapter<String> modelAdapt = new ArrayAdapter<>(this, R.layout.drop_down_item, modelEmpty);
+        ArrayAdapter<String> yearAdapt = new ArrayAdapter<>(this, R.layout.drop_down_item, yearChoic);
         modelAdapt.setDropDownViewResource(R.layout.drop_down_item);
         makeAdapt.setDropDownViewResource(R.layout.drop_down_item);
 
@@ -168,35 +170,33 @@ public class DesktopActivity extends AppCompatActivity {
         yearCheck.setAdapter(yearAdapt);
 
 
-        makeSpinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener()
-        {
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
+        makeSpinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 //                DesktopActivity.this.finish();
 //                DesktopActivity.this.changeText.setText(String.valueOf(position));
-                if(position > 0){
+                if (position > 0) {
 //                    Intent b = new Intent(DesktopActivity.this, ToyotaCamry.class);
 //                    startActivity(b);
                     carMake = make[position];
                     ArrayAdapter<String> modelAdapt;
-                    switch (position){
+                    switch (position) {
                         case 1:
-                            modelAdapt= new ArrayAdapter<>(DesktopActivity.this, R.layout.drop_down_item , modelChev);
+                            modelAdapt = new ArrayAdapter<>(DesktopActivity.this, R.layout.drop_down_item, modelChev);
                             break;
                         case 2:
-                            modelAdapt= new ArrayAdapter<>(DesktopActivity.this, R.layout.drop_down_item , modelFord);
+                            modelAdapt = new ArrayAdapter<>(DesktopActivity.this, R.layout.drop_down_item, modelFord);
                             break;
                         case 3:
-                            modelAdapt= new ArrayAdapter<>(DesktopActivity.this, R.layout.drop_down_item , modelHonda);
+                            modelAdapt = new ArrayAdapter<>(DesktopActivity.this, R.layout.drop_down_item, modelHonda);
                             break;
                         case 4:
-                            modelAdapt= new ArrayAdapter<>(DesktopActivity.this, R.layout.drop_down_item , modelHyundai);
+                            modelAdapt = new ArrayAdapter<>(DesktopActivity.this, R.layout.drop_down_item, modelHyundai);
                             break;
                         case 5:
-                            modelAdapt= new ArrayAdapter<>(DesktopActivity.this, R.layout.drop_down_item , modelToyato);
+                            modelAdapt = new ArrayAdapter<>(DesktopActivity.this, R.layout.drop_down_item, modelToyato);
                             break;
                         default:
-                            modelAdapt= new ArrayAdapter<>(DesktopActivity.this, R.layout.drop_down_item , modelToyato);
+                            modelAdapt = new ArrayAdapter<>(DesktopActivity.this, R.layout.drop_down_item, modelToyato);
                             break;
                     }
                     modelSpinner.setAdapter(modelAdapt);
@@ -204,19 +204,17 @@ public class DesktopActivity extends AppCompatActivity {
 //                Intent b = new Intent(DesktopActivity.this, ToyotaCamry.class);
 //                startActivity(b);
             } // to close the onItemSelected
-            public void onNothingSelected(AdapterView<?> parent)
-            {
+
+            public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
-        modelSpinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener()
-        {
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
+        modelSpinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 //                DesktopActivity.this.finish();
 //                DesktopActivity.this.changeText.setText(String.valueOf(position));
-                if(position > 0){
-                    switch (carMake){
+                if (position > 0) {
+                    switch (carMake) {
 //                        "Chevrolet", "Ford", "Honda", "Hyundai", "Toyota"
                         case "Chevrolet":
                             carModel = modelChev[position];
@@ -243,21 +241,19 @@ public class DesktopActivity extends AppCompatActivity {
 //                Intent b = new Intent(DesktopActivity.this, ToyotaCamry.class);
 //                startActivity(b);
             } // to close the onItemSelected
-            public void onNothingSelected(AdapterView<?> parent)
-            {
+
+            public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
-        modelSpinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener()
-        {
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
-                if(yearChoic[position] != "") {
+        modelSpinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (yearChoic[position] != "") {
                     year = Integer.parseInt(yearChoic[position]);
                 }
             } // to close the onItemSelected
-            public void onNothingSelected(AdapterView<?> parent)
-            {
+
+            public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
@@ -266,13 +262,22 @@ public class DesktopActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Code to be executed when the button is clicked
-                if(mileage != 0){
-                    if(year > 2018 && year < 2024) {
+                if (mileage != 0) {
+                    if (year > 2018 && year < 2024) {
                         intentCaller(carMake + carModel);
                     }
                 }
             }
         });
+        secretButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DesktopActivity.this, AmericaPop.class);
+                startActivity(i);
+                DesktopActivity.this.finish();
 
+            }
+
+        });
     }
 }
